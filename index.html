@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorful Hello World</title>
+<style>
+  /* Define a style for the text */
+  #hello {
+    font-weight: bold;
+    font-size: 24px;
+    animation: colorChange 5s infinite; /* Define animation with a duration of 5 seconds */
+  }
+
+  /* Define a keyframe animation for changing colors */
+  @keyframes colorChange {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: purple; }
+  }
+</style>
+</head>
+<body>
+<!-- Place the "Hello World" text inside a span with an ID -->
+<span id="hello">Hello from Delphix</span>
+
+<script>
+  // Optionally, you can use JavaScript to change the text content dynamically
+  // This is not necessary for the color changing effect, but it's provided for demonstration purposes
+  // You can remove this script if you don't need dynamic text changes
+//Hallo von Delphix
+
+  // Array of different text messages
+  var messages = [
+    " Eric & Team is awesome !",
+    "Bonjour de Delphix !",
+    "Hola desde Delphix !",
+    "Hallo von Delphix !",
+    "Hello from Delphix"
+  
+  ];
+
+  // Function to change the text every 3 seconds
+  setInterval(function() {
+    var index = Math.floor(Math.random() * messages.length);
+    document.getElementById("hello").textContent = messages[index];
+  }, 3000); // Change text every 3 seconds (3000 milliseconds)
+</script>
+
+</body>
+</html>
